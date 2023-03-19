@@ -13,9 +13,9 @@
 ## Database management sistem (DMBS)
 
 * A special software program that helps users create and mantain a database
- - Makes it easy to manage a large amount of information
- - Handles security
- - Backups
- - Importing/exporting data
- - Concurrency
- - interacts with software application  
+    - Makes it easy to manage a large amount of information
+    - Handles security
+    - Backups
+    - Importing/exporting data
+    - Concurrency
+    - interacts with software application  
