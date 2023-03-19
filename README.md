@@ -92,3 +92,13 @@
 * in the employee table we have branch_id field which is privary key for branch table
 
 - `composite key` is a key that needs two attributes
+
+## MySQL
+
+* [download mysql macOS/windows](https://dev.mysql.com/downloads/mysql/)
+
+* MySQL is a DBMS
+
+### Commands
+
+- Create a database: `create database <name>`
