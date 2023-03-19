@@ -20,7 +20,7 @@
     - Concurrency
     - interacts with software application 
 
-## CRUD
+## C.R.U.D.
 * There are 4 main operations with databases:
     - CREATE
     - READ
@@ -45,3 +45,30 @@
 | 1 Jack biology   | jsmith22 wordpass ... |
 | 2 Kate Sociology | catlover44 ilovecats111 ... |
 | 3 Ivan Math      | ... ... ... |
+
+* SQL databases: (mySQL, PostgreSQL, Oracle, etc)
+
+* Structured Query Language:
+    - Standardized language for interaction with RDBMS
+    - Performs CRUD operations and other
+    - Used to define tables and structures
+
+### Non-relational Databases (noSQL)
+
+* Examples:
+
+* Documents: JSON, XML, etc.
+* GRAPHS: Relational nodes.
+* Key-value: strings, maps, etc.
+
+* NRDBMS
+    - Helps users create and maintain NRDB
+        - (mongoDB, dynamoBD, firebase, Redis, etc.)
+
+* Implementation specific:
+    - No standard language for NRDBMS
+    - Own language for performing CRUD and administrative operations
+
+## Database query
+
+- Queries are request made to DBMS for information
