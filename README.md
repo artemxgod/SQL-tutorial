@@ -38,6 +38,7 @@
 ### Relational Databases (SQL)
 
 * Examples:
+
 | Student table | Users tables |
 |---------------|---------------|
 | ID NAME Major    | Username Password email |
