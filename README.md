@@ -31,6 +31,16 @@
 
 | Relational Databases      | Non-relational databases |
 |---------------|---------------|
-| Organize data into tables    | Does not orgonize data in tables |
+| Organize data into tables    | Does not orgonize data in traditional tables |
 | each table has columns and rows | Key-value stores |
 | A unique key identifies each row| Documents, graphs |
+
+### Relational Databases (SQL)
+
+* Examples:
+| Student table | Users tables |
+|---------------|---------------|
+| ID NAME Major    | Username Password email |
+| 1 Jack biology   | jsmith22 wordpass jsm@gmail.com |
+| 2 Kate Sociology | catlover44 ilovecats111 catl@gmail.com |
+| 3 Ivan Math      | ... ... ... |
