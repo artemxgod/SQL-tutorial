@@ -1,6 +1,13 @@
 # SQL DATABASES
 
-1. [What is db](#what-is-a-database)
+1. [What is a DB](#what-is-a-database)
+2. [Database management system](#database-management-sistem-dmbs)
+3. [CRUD](#crud)
+4. [Types of database](#types-of-database)
+    4.1 [Relational Databases](#relational-databases-sql)
+    4.2 [Non-relational Databases](#non-relational-databases-nosql)
+5. [Database query](#database-query)
+6. [Tables and keys](#tables-and-keys)
 
 ## What is a database?
 
