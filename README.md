@@ -42,6 +42,6 @@
 | Student table | Users tables |
 |---------------|---------------|
 | ID NAME Major    | Username Password email |
-| 1 Jack biology   | jsmith22 wordpass jsm@gmail.com |
-| 2 Kate Sociology | catlover44 ilovecats111 catl@gmail.com |
+| 1 Jack biology   | jsmith22 wordpass ... |
+| 2 Kate Sociology | catlover44 ilovecats111 ... |
 | 3 Ivan Math      | ... ... ... |
