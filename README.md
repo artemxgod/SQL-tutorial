@@ -18,4 +18,19 @@
     - Backups
     - Importing/exporting data
     - Concurrency
-    - interacts with software application  
+    - interacts with software application 
+
+## CRUD
+* There are 4 main operations with databases:
+    - CREATE
+    - READ
+    - UPDATE
+    - DELETE
+
+## Types of database
+
+| Relational Databases      | Non-relational databases |
+|---------------|---------------|
+| Organize data into tables    | Does not orgonize data in tables |
+| each table has columns and rows | Key-value stores |
+| A unique key identifies each row| Documents, graphs |
