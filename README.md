@@ -143,7 +143,7 @@ ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
 ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
 ```
 
-- Add new record to the table (examlpe)
+- Add new record to the table (example)
 ```sql
 INSERT INTO student VALUES(1, "Jack", "Biology");
 ```
@@ -153,7 +153,7 @@ INSERT INTO student VALUES(1, "Jack", "Biology");
 SELECT * FROM `student`;
 ```
 
-- Add new record to the table without one field (examlpe)
+- Add new record to the table without one field (example)
 ```sql
 INSERT INTO `student`(`id`, `name`) VALUES(3, "Clair");
 ```
