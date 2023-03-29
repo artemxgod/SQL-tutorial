@@ -99,10 +99,41 @@
 
 * MySQL is a DBMS
 
+## SQL
+
+### Data Types
+
+    - `INT`             // Whole number
+    - `DECIMAL(M,N)`    // Decimal number - Exact value M - digits before decimal point, N - digits after decimal point
+    - `VARCHAR(len)`    // String of text of lenght len
+    - `BLOB`            // Binary large object(images, files)
+    - `DATE`            // YYYY-MM-DD
+    - `TIMESTAMP`       // YYYY-MM-DD HH:MM:SS - used for recording
+
+
 ### Commands
 
-- Create a database: `create database <name>`
+- Create a database: 
+```sql
+create database <dbname>;
+```
 
+- Create table:
+```sql
+CREATE TABLE <name>
+```
+
+- Delete table: 
+```sql
+DROP TABLE <name>
+```
+
+- Get table description
+```sql
+DESCRIBE <tablename>
+```
+
+[!] **Every** sql query ends with a **semicolon** `;`
 
 ### DB Normalization
 - Database normalization provides for reduction to normal form
