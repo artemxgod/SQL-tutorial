@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS student (
   id INT PRIMARY KEY,
-  name VARCHAR(20),
-  major VARCHAR(20)
+  name VARCHAR(20) NOT NULL,
+  major VARCHAR(20) UNIQUE,
+  gpa DECIMAL(2, 1) DEFAULT '5' 
 );

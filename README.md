@@ -104,7 +104,7 @@
 ### Data Types
 
     - `INT`             // Whole number
-    - `DECIMAL(M,N)`    // Decimal number - Exact value M - digits before decimal point, N - digits after decimal point
+    - `DECIMAL(M,N)`    // Decimal number - Exact value M - total digits, N - digits after decimal point
     - `VARCHAR(len)`    // String of text of lenght len
     - `BLOB`            // Binary large object(images, files)
     - `DATE`            // YYYY-MM-DD
@@ -133,7 +133,38 @@ DROP TABLE <name>;
 DESCRIBE <tablename>;
 ```
 
+- Add new field to the table
+```sql
+ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
+```
+
+- Delete the field to the table
+```sql
+ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
+```
+
+- Add new record to the table (examlpe)
+```sql
+INSERT INTO student VALUES(1, "Jack", "Biology");
+```
+
+- Get all records from the table (example)
+```sql
+SELECT * FROM `student`;
+```
+
+- Add new record to the table without one field (examlpe)
+```sql
+INSERT INTO `student`(`id`, `name`) VALUES(3, "Clair");
+```
+
 [!] **Every** sql query ends with a **semicolon** `;`
+
+### Constraints
+
+    - `NOT NULL`        - field can not be NULL
+    - `Unique`          - no duplication of this field in other rows
+    - `DEFAULT <val>`   - Has a default value
 
 ### DB Normalization
 - Database normalization provides for reduction to normal form
