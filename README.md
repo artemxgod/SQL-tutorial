@@ -120,17 +120,17 @@ create database <dbname>;
 
 - Create table:
 ```sql
-CREATE TABLE <name>
+CREATE TABLE <name>;
 ```
 
 - Delete table: 
 ```sql
-DROP TABLE <name>
+DROP TABLE <name>;
 ```
 
 - Get table description
 ```sql
-DESCRIBE <tablename>
+DESCRIBE <tablename>;
 ```
 
 [!] **Every** sql query ends with a **semicolon** `;`
