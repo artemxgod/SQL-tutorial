@@ -102,3 +102,18 @@
 ### Commands
 
 - Create a database: `create database <name>`
+
+
+### DB Normalization
+- Database normalization provides for reduction to normal form
+- Normal form 1:
+    - no duplicated rows
+    - all atributes are atomic
+    - no dublicated atributes with common mean
+- Normal form 2:
+    - Conditions of NF1 are met
+    - Have a primary key
+    - all non-key attributes depend on **whole** primary key
+- Normal form 3:
+    Conditions of NF2 are met
+    - Non-key attrubutes are depend **only** on primary key and not depend on other atrubutes.
