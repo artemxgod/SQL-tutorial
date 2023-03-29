@@ -84,12 +84,12 @@
 
 ## Tables and keys
 
-- Unique ID's are used to specify a row and called `privary key`
-- `foreign key` refers to privary key in another table
+- Unique ID's are used to specify a row and called `primary key`
+- `foreign key` refers to primary key in another table
 
 ![fkey](./images/foreign_key.png)
 ![branch-table](./images/branch-table.png)
-* in the employee table we have branch_id field which is privary key for branch table
+* in the employee table we have branch_id field which is primary key for branch table
 
 - `composite key` is a key that needs two attributes
 
