@@ -140,7 +140,7 @@ ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
 
 - Delete the field to the table
 ```sql
-ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
+ALTER TABLE student DROP <fieldname>;
 ```
 
 - Add new record to the table (example)
@@ -165,6 +165,7 @@ INSERT INTO `student`(`id`, `name`) VALUES(3, "Clair");
     - `NOT NULL`        - field can not be NULL
     - `Unique`          - no duplication of this field in other rows
     - `DEFAULT <val>`   - Has a default value
+    - `AUTO_INCREMENT`
 
 ### DB Normalization
 - Database normalization provides for reduction to normal form
