@@ -113,10 +113,14 @@
 
 ### Commands
 
+#### Database
+
 - Create a database: 
 ```sql
 create database <dbname>;
 ```
+
+#### Tables
 
 - Create table:
 ```sql
@@ -133,6 +137,8 @@ DROP TABLE <name>;
 DESCRIBE <tablename>;
 ```
 
+#### Table rows
+
 - Add new field to the table
 ```sql
 ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
@@ -142,6 +148,8 @@ ALTER TABLE student ADD <fieldname> DECIMAL(3,1);
 ```sql
 ALTER TABLE student DROP <fieldname>;
 ```
+
+#### Add & Get records
 
 - Add new record to the table (example)
 ```sql
@@ -156,6 +164,28 @@ SELECT * FROM `student`;
 - Add new record to the table without one field (example)
 ```sql
 INSERT INTO `student`(`id`, `name`) VALUES(3, "Clair");
+```
+
+#### Change & Delete record
+
+- Change field value
+```sql
+UPDATE `student` SET `major`='biology' WHERE major = 'bio'
+```
+
+- Change field with multiple conditions
+```sql
+UPDATE student SET major = 'biochemistry' WHERE major = 'chemistry' OR major = 'bio'
+```
+
+- Change multiple fields
+```sql
+UPDATE `student` SET `name`='Victor',`major`='Science',`gpa`='5' WHERE id = 1
+```
+
+- Change field for every row
+```sql
+UPDATE `student` SET `gpa`=0.0
 ```
 
 [!] **Every** sql query ends with a **semicolon** `;`
