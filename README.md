@@ -122,6 +122,8 @@ create database <dbname>;
 
 #### Tables
 
+[!] To migrate into mysql i used migrate -path ./migrations/ -database mysql://root@tcp(localhost:3306)/sql-tutorial?query up (does not work in powershell, cmd only)
+
 - Create table:
 ```sql
 CREATE TABLE <name>;
@@ -186,6 +188,128 @@ UPDATE `student` SET `name`='Victor',`major`='Science',`gpa`='5' WHERE id = 1
 - Change field for every row
 ```sql
 UPDATE `student` SET `gpa`=0.0
+```
+
+- Delete a row from table
+```sql
+DELETE FROM students WHERE id = 1
+```
+
+- Delete rows with multiple conditions
+```sql
+DELETE FROM `student` WHERE name = 'Nemo' AND major = 'Biology'
+```
+
+#### Basic queries
+
+- Get records sort by name
+```sql
+SELECT `id`, `name`, `major`, `gpa` FROM `student` ORDER BY name
+```
+
+- Get records sort by name desc order
+```sql
+SELECT `id`, `name`, `major`, `gpa` FROM `student` ORDER BY name DESC
+```
+
+- Get records sort by name then by major 
+```sql
+SELECT `id`, `name`, `major`, `gpa` FROM `student` ORDER BY name, major
+```
+
+- Get records with record limit
+```sql
+SELECT `id`, `name`, `major`, `gpa` FROM `student` LIMIT <amount>;
+```
+
+- Get records where id is not equal to 1 (also works with multiple conditions)
+```sql
+SELECT * FROM `student` WHERE id <> 1;
+```
+
+- Get records where name is one of represented (also works with multiple conditions)
+```sql
+SELECT * FROM `student` WHERE name IN ('Fox', 'Nemo', 'Victor')
+```
+
+### Company Database
+
+- Creating employee table
+```sql
+   CREATE TABLE employee (
+	emp_id INT PRIMARY KEY,
+    first_name VARCHAR(40),
+    last_name VARCHAR(40),
+    birth_day DATE,
+    sex VARCHAR(1),
+    salary INT,
+    super_id INT,
+    branch_id INT
+);
+```
+
+- Creating branch table
+```sql
+CREATE TABLE branch (
+    branch_id INT PRIMARY KEY,
+    branch_name VARCHAR(40),
+    mgr_id INT,
+    mgr_start_date DATE,
+    -- defining foreign key mrg_id to eployee table primary key
+    FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
+);
+```
+
+- Defining foreign keys for employee table
+```sql
+-- adding foreign key (counld not do it before because branch table was not created)
+ALTER TABLE employee
+ADD FOREIGN KEY(branch_id)
+REFERENCES branch(branch_id)
+ON DELETE SET NULL;
+
+ALTER TABLE employee
+ADD FOREIGN KEY(super_id)
+REFERENCES employee(emp_id)
+ON DELETE SET NULL;
+```
+
+- Creating client table
+```sql
+CREATE TABLE client (
+	client_id INT PRIMARY KEY,
+    client_name VARCHAR(40),
+    branch_id INT,
+    FOREIGN KEY(branch_id) REFERENCES branch(branch_id)
+    ON DELETE SET NULL
+);
+```
+
+- Creating works-with table
+```sql
+CREATE TABLE works_with (
+	emp_id INT,
+    client_id INT,
+    total_sales INT,
+    PRIMARY KEY(emp_id, client_id),
+    FOREIGN KEY(emp_id) REFERENCES employee(emp_id)
+    -- error will occur if ON DELETE SET NULL used
+    ON DELETE CASCADE,
+	FOREIGN KEY(client_id) REFERENCES client(client_id)
+    -- error will occur if ON DELETE SET NULL used
+    ON DELETE CASCADE
+);
+```
+- Creating branch_supplier table
+```sql
+CREATE TABLE branch_supplier (
+    branch_id INT,
+    supplier_name VARCHAR(40),
+    supply_type VARCHAR(40),
+    PRIMARY KEY(branch_id, supplier_name),
+    FOREIGN KEY(branch_id) REFERENCES branch(branch_id)
+    ON DELETE CASCADE
+);
 ```
 
 [!] **Every** sql query ends with a **semicolon** `;`
