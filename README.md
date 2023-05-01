@@ -311,6 +311,59 @@ CREATE TABLE branch_supplier (
     ON DELETE CASCADE
 );
 ```
+- Adding records to tables (example)
+```sql
+INSERT INTO employee VALUES(100, "David", "Wallace", '1967-11-17', 'M', 250000, NULL, NULL);
+INSERT INTO branch VALUES(1, "Corporate", 100, '2006-02-09');
+
+UPDATE employee SET branch_id = 1 WHERE emp_id = 100;
+
+INSERT INTO employee VALUES(101, 'Jan', 'Levinson', '1965-05-11', 'F', 110000, 100, 1);
+```
+
+- Getting `first name` from every record in table but in response field will be `name`
+```sql
+SELECT first_name AS name FROM `employee`
+```
+
+- Get only unique first names from table
+```sql
+SELECT DISTINCT first_name FROM employee
+```
+
+- Get amount of the employees
+```sql
+SELECT COUNT(emp_id) FROM employee;
+```
+
+- Get only unique first names from table
+```sql
+SELECT DISTINCT first_name FROM employee;
+```
+
+- find the number of female employees born after 1970
+```sql
+SELECT * FROM employee WHERE sex = 'F' AND birth_date > '1971-01-01';
+```
+- Find average salary
+```sql
+SELECT AVG(salary) FROM employee;
+```
+
+- Find the sum of all salaries
+```sql
+SELECT SUM(salary) FROM employee;
+```
+
+- Find amount of males and females in the company
+```sql
+SELECT COUNT(sex), sex FROM employee GROUP BY sex;
+```
+
+- Find how much each client spent
+```sql
+SELECT SUM(total_sales), client_id FROM works_with GROUP BY client_id;
+```
 
 [!] **Every** sql query ends with a **semicolon** `;`
 
