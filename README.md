@@ -397,10 +397,17 @@ SELECT * FROM employee WHERE birth_date LIKE '_____10%';
 ### Unions
 
 - Let us combine multiple SELECT statements into one result
+
+- Get employee
 ```sql
-SELECT * FROM employee UNION SELECT branch_name FROM branch;
+SELECT first_name FROM employee UNION SELECT branch_name FROM branch;
 ```
 [!] Both select statements must have same amount of columns and similar data types of columns
+
+### Joins
+
+
+
 
 ### Constraints
 
