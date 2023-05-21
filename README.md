@@ -141,7 +141,7 @@ create database <dbname>;
 
 #### Tables
 
-[!] To migrate into mysql i used migrate -path ./migrations/ -database mysql://root@tcp(localhost:3306)/sql-tutorial?query up (does not work in powershell, cmd only)
+- [!] To migrate into mysql i used migrate -path ./migrations/ -database mysql://root@tcp(localhost:3306)/sql-tutorial?query up (does not work in powershell, cmd only)
 
 - Create table:
 ```sql
@@ -330,7 +330,7 @@ CREATE TABLE branch_supplier (
     ON DELETE CASCADE
 );
 ```
-[!] ON DELETE CASCADE Indicates that when the row in the parent table is deleted, the dependent rows in the child table will also be deleted. ON DELETE SET NULL Covert foreign key values to null when the parent value is removed. Without the ON DELETE CASCADE or the ON DELETE SET NULL options, the row in the parent table cannot be deleted if it is referenced in the child table
+- [!] ON DELETE CASCADE Indicates that when the row in the parent table is deleted, the dependent rows in the child table will also be deleted. ON DELETE SET NULL Covert foreign key values to null when the parent value is removed. Without the ON DELETE CASCADE or the ON DELETE SET NULL options, the row in the parent table cannot be deleted if it is referenced in the child table
 
 - Adding records to tables (example)
 ```sql
@@ -396,7 +396,7 @@ SELECT * FROM clients WHERE client_name LIKE '%LLC';
 SELECT * FROM employee WHERE birth_date LIKE '_____10%';
 ```
 
-[!] **Every** sql query ends with a **semicolon** `;`
+- [!] **Every** sql query ends with a **semicolon** `;`
 
 ### Unions
 
@@ -406,7 +406,7 @@ SELECT * FROM employee WHERE birth_date LIKE '_____10%';
 ```sql
 SELECT first_name FROM employee UNION SELECT branch_name FROM branch;
 ```
-[!] Both select statements must have same amount of columns and similar data types of columns
+- [!] Both select statements must have same amount of columns and similar data types of columns
 
 ### Joins
 
@@ -430,8 +430,8 @@ SELECT employee.emp_id, employee.first_name, branch.branch_name
 FROM employee RIGHT JOIN branch ON employee.emp_id = branch.mng_id
 ```
 
-[!] `FULL JOIN` is a combination of LEFT and RIGHT JOIN. **Not represented** in mySQL
-[!] `INNER JOIN` is the basic JOIN itself
+- [!] `FULL JOIN` is a combination of LEFT and RIGHT JOIN. **Not represented** in mySQL
+- [!] `INNER JOIN` is the basic JOIN itself
 
 ### Nested queries
 
