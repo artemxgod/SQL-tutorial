@@ -8,6 +8,23 @@
     - 4.2 [Non-relational Databases](#non-relational-databases-nosql)
 5. [Database query](#database-query)
 6. [Tables and keys](#tables-and-keys)
+7. [mySQL](#mysql)
+8. [SQL](#sql)
+    - 8.1 [Data types](#data-types)
+    - 8.2 [Commands](#commands)
+        - 8.2.1 [Database](#database)
+        - 8.2.2 [Tables](#tables)
+        - 8.2.3 [Table rows](#table-rows)
+        - 8.2.4 [Add and Get record](#add--get-records)
+        - 8.2.5 [Change and Delete record](#change--delete-record)
+        - 8.2.6 [Basic queries](#basic-queries)
+    - 8.3 [Company Database](#company-database)
+    - 8.4 [Unions](#unions)
+    - 8.5 [Constraints](#constraints)
+    - 8.6 [Normalization](#db-normalization)
+
+
+
 
 ## What is a database?
 
@@ -365,7 +382,25 @@ SELECT COUNT(sex), sex FROM employee GROUP BY sex;
 SELECT SUM(total_sales), client_id FROM works_with GROUP BY client_id;
 ```
 
+- Find clients who are LLC (`%` means any character, `_` means one character)
+```sql
+SELECT * FROM clients WHERE client_name LIKE '%LLC';
+```
+
+- Find employee born in october
+```sql
+SELECT * FROM employee WHERE birth_date LIKE '_____10%';
+```
+
 [!] **Every** sql query ends with a **semicolon** `;`
+
+### Unions
+
+- Let us combine multiple SELECT statements into one result
+```sql
+SELECT * FROM employee UNION SELECT branch_name FROM branch;
+```
+[!] Both select statements must have same amount of columns and similar data types of columns
 
 ### Constraints
 
