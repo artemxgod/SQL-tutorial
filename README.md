@@ -22,6 +22,8 @@
     - 8.4 [Unions](#unions)
     - 8.5 [Constraints](#constraints)
     - 8.6 [Normalization](#db-normalization)
+    - 8.7 [Joins](#joins)
+    - 8.8 [Nested queries](#nested-queries)
 
 
 
@@ -328,6 +330,8 @@ CREATE TABLE branch_supplier (
     ON DELETE CASCADE
 );
 ```
+[!] ON DELETE CASCADE Indicates that when the row in the parent table is deleted, the dependent rows in the child table will also be deleted. ON DELETE SET NULL Covert foreign key values to null when the parent value is removed. Without the ON DELETE CASCADE or the ON DELETE SET NULL options, the row in the parent table cannot be deleted if it is referenced in the child table
+
 - Adding records to tables (example)
 ```sql
 INSERT INTO employee VALUES(100, "David", "Wallace", '1967-11-17', 'M', 250000, NULL, NULL);
@@ -406,6 +410,32 @@ SELECT first_name FROM employee UNION SELECT branch_name FROM branch;
 
 ### Joins
 
+- Joins combines rows from two or more tables based on a related column between them
+
+- Find all branches and the names of their managers
+```sql
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee JOIN branch ON employee.emp_id = branch.mng_id
+```
+
+- Find all branches and the names of their managers and print other employee after (using `LEFT JOIN`)
+```sql
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee LEFT JOIN branch ON employee.emp_id = branch.mng_id
+```
+
+- Find all branches and the names of their managers and print remaining branches (using `RIGHT JOIN`)
+```sql
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee RIGHT JOIN branch ON employee.emp_id = branch.mng_id
+```
+
+[!] `FULL JOIN` is a combination of LEFT and RIGHT JOIN. **Not represented** in mySQL
+[!] `INNER JOIN` is the basic JOIN itself
+
+### Nested queries
+
+- Using multiple SELECT statements in order to get specific piece of information
 
 
 
