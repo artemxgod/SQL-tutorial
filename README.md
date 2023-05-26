@@ -24,6 +24,8 @@
     - 8.6 [Normalization](#db-normalization)
     - 8.7 [Joins](#joins)
     - 8.8 [Nested queries](#nested-queries)
+    - 8.9 [On delete](#on-delete)
+    - 8.10 [Triggers](#triggers)
 
 
 
@@ -452,6 +454,47 @@ SELECT FROM client.client_name FROM client WHERE client.branch_id = (
     SELECT branch.branch_id FROM branch WHERE branch.mgr_id = 102
 )
 ```
+
+### ON DELETE
+
+- `ON DELETE SET NULL` - sets foreign_key value to NULL if foreign key does not refer to existing data anymore
+- `ON DELETE CASCADE` - deletes the row if foreign key does not refer to existing data anymore
+
+We can use `SET NULL` if foreign key is not used as a primary key, so it is not essential.
+
+### Triggers
+
+- Triggers allow us to set certain behavior if something changes in database
+
+- Add message to trigger_test table if new record was inserted into employee table
+```sql
+DELIMITER $$
+CREATE TRIGGER my_trigger BEFORE INSERT ON employee
+	FOR EACH ROW BEGIN
+    	INSERT INTO trigger_test VALUES('new employee added');
+    END$$
+DELIMITER ;
+```
+- [!] Delimiter changes delemitr from `;` to selected. It is required because it will naturally end query after `;`
+
+- Add message with name of a new employee to trigger_test table if new record was inserted into employee table 
+```sql
+DELIMITER $$
+CREATE TRIGGER my_trigger_2 BEFORE INSERT ON employee
+	FOR EACH ROW BEGIN
+    	INSERT INTO trigger_test VALUES(NEW.first_name);
+    END$$
+DELIMITER ;
+```
+
+- Delete trigger 'my_trigger'
+```sql
+DROP TRIGGER my_trigger
+```
+
+### ER diagrams
+
+
 
 
 ### Constraints
