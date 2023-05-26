@@ -437,6 +437,21 @@ FROM employee RIGHT JOIN branch ON employee.emp_id = branch.mng_id
 
 - Using multiple SELECT statements in order to get specific piece of information
 
+- Find names of all employee who have sold over 30k to a single client
+```sql
+SELECT employee.first_name, emloyee.last_name FROM employee
+WHERE employee.emp_id IN (
+    SELECT works_with.emp_id FROM works_with
+    WHERE works_with.total_sales > 30000;
+);
+```
+
+- Find all clients who are handled by the branch that employee 102 manages
+```sql
+SELECT FROM client.client_name FROM client WHERE client.branch_id = (
+    SELECT branch.branch_id FROM branch WHERE branch.mgr_id = 102
+)
+```
 
 
 ### Constraints
