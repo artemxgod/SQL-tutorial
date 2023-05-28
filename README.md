@@ -502,7 +502,28 @@ DROP TRIGGER my_trigger
 
 - How to display entity and it's attributes
 - ![attributes and entity](./images/attributes_and_entity.png)
-- in drawio format - [attributes and entity](./diagrams/attributes_and_entity.drawio)
+
+- `Primary key` uniquely identifies an entity in the table
+- ![Primary key student_id](./images/primary_key_er.png)
+
+- `Composite attribute is an attribute that can be broken up into sub-attributes
+- ![composite attribute name](./images/composite_at.png)
+
+- `Multi-valued attribute` is an attribute that contains more then one value
+- ![multi-valued clubs](./images/multi_val.png)
+
+- `Derived attribute` -- attribute that can be derived  from the other attributes
+- ![Derived attribute has honors](./images/derived_at.png)
+
+- `Multiple entities` -- diagram can have more then one entity
+- ![multiple entity](./images/multi_entity.png)
+
+- `Relationship` defines a relationship between two entities
+- `Total participation` means all members participate in the relationship
+- ![relationship](./images/relationship.png)
+- [!] Not all students have to take a class but a class must be taken by at least one student
+
+
 
 
 
