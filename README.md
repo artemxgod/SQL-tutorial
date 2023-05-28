@@ -508,6 +508,7 @@ DROP TRIGGER my_trigger
 
 - `Composite attribute` is an attribute that can be broken up into sub-attributes
 - ![composite attribute name](./images/composite_at.png)
+- [!] arrow end is not required
 
 - `Multi-valued attribute` is an attribute that contains more then one value
 - ![multi-valued clubs](./images/multi_val.png)
