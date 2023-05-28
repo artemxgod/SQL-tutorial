@@ -494,6 +494,16 @@ DROP TRIGGER my_trigger
 
 ### ER diagrams
 
+- ER stands for entity relationship diagrams
+
+- `Entity` -- an object we want to model & store information about
+- `attributes` -- specific piece of information about an entity
+
+- How to display entity and it's attributes
+- [attributes and entity](./images/attributes_and_entity.png)
+- in drawio format - [attributes and entity](./diagrams/attributes_and_entity.drawio)
+
+
 
 
 
