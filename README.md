@@ -26,6 +26,7 @@
     - 8.8 [Nested queries](#nested-queries)
     - 8.9 [On delete](#on-delete)
     - 8.10 [Triggers](#triggers)
+9. [ER diagrams](#er-diagrams)
 
 
 
@@ -492,7 +493,7 @@ DELIMITER ;
 DROP TRIGGER my_trigger
 ```
 
-### ER diagrams
+## ER diagrams
 
 - ER stands for entity relationship diagrams
 
