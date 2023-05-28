@@ -506,7 +506,7 @@ DROP TRIGGER my_trigger
 - `Primary key` uniquely identifies an entity in the table
 - ![Primary key student_id](./images/primary_key_er.png)
 
-- `Composite attribute is an attribute that can be broken up into sub-attributes
+- `Composite attribute` is an attribute that can be broken up into sub-attributes
 - ![composite attribute name](./images/composite_at.png)
 
 - `Multi-valued attribute` is an attribute that contains more then one value
