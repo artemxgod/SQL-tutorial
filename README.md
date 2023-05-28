@@ -500,7 +500,7 @@ DROP TRIGGER my_trigger
 - `attributes` -- specific piece of information about an entity
 
 - How to display entity and it's attributes
-![attributes and entity](./images/attributes_and_entity.png)
+- ![attributes and entity](./images/attributes_and_entity.png)
 - in drawio format - [attributes and entity](./diagrams/attributes_and_entity.drawio)
 
 
