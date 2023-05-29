@@ -411,6 +411,27 @@ SELECT first_name FROM employee UNION SELECT branch_name FROM branch;
 ```
 - [!] Both select statements must have same amount of columns and similar data types of columns
 
+### Constraints
+
+    - `NOT NULL`        - field can not be NULL
+    - `Unique`          - no duplication of this field in other rows
+    - `DEFAULT <val>`   - Has a default value
+    - `AUTO_INCREMENT`
+
+### DB Normalization
+- Database normalization provides for reduction to normal form
+- Normal form 1:
+    - no duplicated rows
+    - all atributes are atomic
+    - no dublicated atributes with common mean
+- Normal form 2:
+    - Conditions of NF1 are met
+    - Have a primary key
+    - all non-key attributes depend on **whole** primary key
+- Normal form 3:
+    Conditions of NF2 are met
+    - Non-key attrubutes are depend **only** on primary key and not depend on other atrubutes.
+
 ### Joins
 
 - Joins combines rows from two or more tables based on a related column between them
@@ -537,28 +558,3 @@ DROP TRIGGER my_trigger
 
 
 
-
-
-
-
-
-### Constraints
-
-    - `NOT NULL`        - field can not be NULL
-    - `Unique`          - no duplication of this field in other rows
-    - `DEFAULT <val>`   - Has a default value
-    - `AUTO_INCREMENT`
-
-### DB Normalization
-- Database normalization provides for reduction to normal form
-- Normal form 1:
-    - no duplicated rows
-    - all atributes are atomic
-    - no dublicated atributes with common mean
-- Normal form 2:
-    - Conditions of NF1 are met
-    - Have a primary key
-    - all non-key attributes depend on **whole** primary key
-- Normal form 3:
-    Conditions of NF2 are met
-    - Non-key attrubutes are depend **only** on primary key and not depend on other atrubutes.
