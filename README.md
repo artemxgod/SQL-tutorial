@@ -524,6 +524,18 @@ DROP TRIGGER my_trigger
 - ![relationship](./images/relationship.png)
 - [!] Not all students have to take a class but a class must be taken by at least one student
 
+- `Relationship attribute` -- an attribute about the relationship
+- ![relationship attribute grade](./images/relationship_at.png)
+
+- `Relationship cardinality` is the number of instances of an entity from a relation that can be associated with the relation
+- cardinalities can be: 1:1, 1:N, N:M
+- ![relationship cardinality](./images/relationship_cardinality.png)
+
+- `Weak entity` is an entity that cannot be uniquely identified and depends on different entity
+- `Identifying relationship` - relationship that serves to uniquely identify the week entity
+- ![Weak entity exam](./images/weak_entity.png)
+
+
 
 
 
