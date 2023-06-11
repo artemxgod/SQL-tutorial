@@ -556,5 +556,6 @@ DROP TRIGGER my_trigger
 - `Identifying relationship` - relationship that serves to uniquely identify the week entity
 - ![Weak entity exam](./images/weak_entity.png)
 
-
+[!] - use this link to connect to mysql database:
+login:password@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local
 
